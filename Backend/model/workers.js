@@ -27,16 +27,15 @@ const WorkerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    // ✅ ADD DATE FIELDS
+    
     createdAt: {
       type: Date,
-      default: Date.now,  // Automatically set to current date/time
+      default: Date.now,  
     },
-   
   },
   {
     versionKey: false,
-    timestamps: true,  // Automatically update createdAt and updatedAt
+    timestamps: true, 
   },
 );
 
