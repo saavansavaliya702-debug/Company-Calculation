@@ -96,7 +96,7 @@ function App() {
 
     const isRound = selectedShape === "Round";
 
-    // ✅ FIXED: Changed 0 to 10 for Round shape
+    // FIXED: Changed 0 to 10 for Round shape
     const rupee0to99 = weight0to99 * (isRound ? 0 : 15);
     const rupee100to149 = weight100to149 * (isRound ? 8 : 12);
     const rupee150to199 = weight150to199 * (isRound ? 7.25 : 12);
