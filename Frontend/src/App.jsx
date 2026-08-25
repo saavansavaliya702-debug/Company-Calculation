@@ -44,7 +44,7 @@ function App() {
         item.selectedShape || item.shape || "N/A",
         item.totalWeight?.toFixed(2) || "N/A",
         `Rs:-${item.totalRupee?.toFixed(2) || "N/A"}`,
-        `Rs:-${item.totalRupee - (40000)?.toFixed(2) || "N/A"}`,
+        `Rs:-${item.dueAmount?.toFixed(2) || "N/A"}`,
       ]),
     });
 
@@ -204,9 +204,10 @@ function App() {
     if (!window.confirm("Are you sure you want to delete this entry?")) return;
 
     try {
-      const response = await fetch(`https://company-calculation-backend.onrender.com/workers/${id}`, {
-        method: "DELETE",
-      });
+     if (!response.ok) {
+  const errorData = await response.json();
+  throw new Error(errorData.message || "Delete failed");
+}
 
       if (!response.ok) throw new Error("Failed to delete");
 
