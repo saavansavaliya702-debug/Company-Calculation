@@ -11,7 +11,6 @@ const WorkerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-
     shape: {
       type: String,
       required: true,
@@ -28,9 +27,19 @@ const WorkerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    // ✅ ADD DATE FIELDS
+    createdAt: {
+      type: Date,
+      default: Date.now,  // Automatically set to current date/time
+    },
+    updatedAt: {
+      type: Date,
+      default: Date.now,
+    },
   },
   {
     versionKey: false,
+    timestamps: true,  // Automatically update createdAt and updatedAt
   },
 );
 
