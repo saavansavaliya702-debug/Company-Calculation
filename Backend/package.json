@@ -7,10 +7,11 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "build": "exit 0"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "nodemon app.js",
+  "start": "node app.js",
+  "build": "echo 'No build step required'"
+},
   "dependencies": {
     "colors": "^1.4.0",
     "cors": "^2.8.6",
