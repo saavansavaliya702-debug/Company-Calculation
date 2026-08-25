@@ -38,13 +38,14 @@ function App() {
 
     autoTable(doc, {
       startY: 22,
-      head: [["Name", "Shape", "Total Weight", "Total Rupee", "Due Amount"]],
+      head: [["Name", "Shape", "Total Weight", "Total Rupee", "Due Amount", "Created At"]],
       body: store.map((item) => [
         item.name,
         item.selectedShape || item.shape || "N/A",
         item.totalWeight?.toFixed(2) || "N/A",
         `Rs:-${item.totalRupee?.toFixed(2) || "N/A"}`,
         `Rs:-${item.totalRupee - (40000)?.toFixed(2) || "N/A"}`,
+        new Date(item.createdAt).toLocaleString() || "N/A",
       ]),
     });
 
@@ -351,6 +352,7 @@ function App() {
                 <th>Total Weight</th>
                 <th>Total Rupee</th>
                 <th>Due Amount</th>
+                <th>Created At (Date & Time)</th>
               </tr>
             </thead>
             <tbody>
@@ -364,6 +366,9 @@ function App() {
                     {item.totalRupee != null ?
                       `₹${(Number(item.totalRupee) - 40000).toFixed(2)}`
                     : "N/A"}
+                  </td>
+                  <td>
+                    {item.createdAt ? new Date(item.createdAt).toLocaleString() : "N/A"}
                   </td>
                   <td>
                     <button
