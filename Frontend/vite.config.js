@@ -4,9 +4,12 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
-    outDir: "dist",
-    sourcemap: false,
-    minify: "terser",
-  },
+   build: {
+    outDir: 'dist',
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
 })
