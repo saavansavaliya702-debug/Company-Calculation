@@ -3,5 +3,8 @@
     "jspdf": "^4.2.1",
     "jspdf-autotable": "^5.0.8",
     "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "rolldown": "^1.2.5"
   }
 }
