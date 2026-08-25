@@ -352,7 +352,7 @@ function App() {
                 <th>Total Weight</th>
                 <th>Total Rupee</th>
                 <th>Due Amount</th>
-                <th>Created At (Date & Time)</th>
+                <th>Date & Time</th>
               </tr>
             </thead>
             <tbody>
