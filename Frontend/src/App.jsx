@@ -15,7 +15,7 @@ function App() {
     async function getStudents() {
       try {
         setLoading(true);
-        const response = await fetch("https://company-calculation-backend.onrender.com/workers");
+        const response = await fetch("https://company-calculation-backend.onrender.com/Worker");
         if (!response.ok) throw new Error("Failed to fetch Data");
         const data = await response.json();
         setStore(data);
@@ -165,7 +165,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("https://company-calculation-backend.onrender.com/workers", {
+      const response = await fetch("https://company-calculation-backend.onrender.com/Worker", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -204,7 +204,7 @@ function App() {
     if (!window.confirm("Are you sure you want to delete this entry?")) return;
 
     try {
-      const response = await fetch(`https://company-calculation-backend.onrender.com/workers/${id}`, {
+      const response = await fetch(`https://company-calculation-backend.onrender.com/Worker/${id}`, {
         method: "DELETE",
       });
 
