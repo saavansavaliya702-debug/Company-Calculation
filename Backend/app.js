@@ -7,7 +7,10 @@ const PORT = process.env.PORT || 5000;
 var colors = require("colors");
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+    'http://localhost:5173',  // For local development
+    'https://company-calculation-frontend.onrender.com'  // Your live frontend
+  ],
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type"],
