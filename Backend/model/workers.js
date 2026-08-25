@@ -32,10 +32,7 @@ const WorkerSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,  // Automatically set to current date/time
     },
-    updatedAt: {
-      type: Date,
-      default: Date.now,
-    },
+   
   },
   {
     versionKey: false,
