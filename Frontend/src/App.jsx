@@ -15,7 +15,7 @@ function App() {
     async function getStudents() {
       try {
         setLoading(true);
-        const response = await fetch("https://company-calculation-4-zrmy.onrender.com"/workers);
+        const response = await fetch("https://company-calculation-4-zrmy.onrender.com/workers");
         if (!response.ok) throw new Error("Failed to fetch Data");
         const data = await response.json();
         setStore(data);
