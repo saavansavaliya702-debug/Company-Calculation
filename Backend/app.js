@@ -8,8 +8,8 @@ var colors = require("colors");
 app.use(
   cors({
     origin: [
-    'http://localhost:5173',  // For local development
-    'https://company-calculation-frontend.onrender.com'  // Your live frontend
+    'http://localhost:5173', 
+    'https://company-calculation-frontend.onrender.com'  
   ],
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE"],
