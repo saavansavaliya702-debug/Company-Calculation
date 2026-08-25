@@ -5,6 +5,7 @@
     "vite": "^5.0.0"
   },
   "devDependencies": {
-    "rolldown": "^1.2.5"
+    "rolldown": "^1.2.5",
+    "terser": "^5.50.0"
   }
 }
