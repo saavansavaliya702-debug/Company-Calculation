@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 ///////---------POST Data----///////////////////////
-app.post("/workers", async (req, res) => {
+app.post("/Worker", async (req, res) => {
   try {
     const user = new Worker(req.body);
     const createUsr = await user.save();
@@ -32,7 +32,7 @@ app.post("/workers", async (req, res) => {
 });
 
 ///////---------GET Data----//////////////
-app.get("/workers", async (req, res) => {
+app.get("/Worker", async (req, res) => {
   try {
     const workers = await Worker.find();
     return res.status(200).send(workers);
@@ -42,7 +42,7 @@ app.get("/workers", async (req, res) => {
 });
 
 ///////-----Get ony one Data----//////////
-app.get("/workers/:id", async (req, res) => {
+app.get("/Worker/:id", async (req, res) => {
   try {
     const _id = req.params.id;
 
@@ -55,7 +55,7 @@ app.get("/workers/:id", async (req, res) => {
 });
 
 ///////-----Update ony one Data----//////////
-app.patch("/workers/:id", async (req, res) => {
+app.patch("/Worker/:id", async (req, res) => {
   try {
     const _id = req.params.id;
 
@@ -70,7 +70,7 @@ app.patch("/workers/:id", async (req, res) => {
 });
 
 ///////-----Delete ony one Data----//////////
-app.delete("/workers/:id", async (req, res) => {
+app.delete("/Worker/:id", async (req, res) => {
   try {
     const _id = req.params.id;
 
